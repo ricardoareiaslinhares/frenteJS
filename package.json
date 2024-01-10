@@ -1,0 +1,27 @@
+{
+  "name": "frentejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "tailwind": "tailwindcss -i src/tailwind.css -o dist/css/styles.css --watch",
+    "dev": "concurrently \"npm run tailwind\" \"tsc --watch\""
+  },
+  "exclude": [
+    "src/**/*.ts"
+  ],
+  "include": [
+    "dist/**/*.js"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "concurrently": "^8.2.2",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3"
+  }
+}
