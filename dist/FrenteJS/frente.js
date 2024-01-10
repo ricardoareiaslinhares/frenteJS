@@ -15,7 +15,7 @@ const Selector_id = (HTMLElementIdValue) => {
     }
     return element;
 };
-const ParentAppElement = Selector("#app");
+const ParentAppElement = Selector("body");
 /* //Grab id from HTMLELEMENT - Not in use
 const getIdFromHTMLElement = (HTMLElement:HTMLElement): string | null =>  {
     const id = HTMLElement.id

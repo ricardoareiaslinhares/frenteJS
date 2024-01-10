@@ -18,7 +18,7 @@ const Selector = (IdClassTag: string): HTMLElement | null => {
   };
 
 
-const ParentAppElement = Selector("#app") as HTMLBodyElement;
+const ParentAppElement = Selector("body") as HTMLBodyElement;
 
 
 /* //Grab id from HTMLELEMENT - Not in use
