@@ -1,11 +1,14 @@
 .vscode
+node_modules
+
 dist/css
 dist/ui
+dist/components
 dist/app.js
 dist/app.js.map
 dist/FrenteJS/frente.js.map
 
-node_modules
+
 tailwind.config.js
 tsconfig.json
 
@@ -13,6 +16,3 @@ src/components
 src/ui
 src/app.ts
 src/tailwind.css
-
-package.json
-package-lock.json
