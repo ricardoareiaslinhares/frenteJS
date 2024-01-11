@@ -1,6 +1,6 @@
 # Frente.js
 
-FrenteJS is a lightweight JavaScript / TypeScript library that provides a set of functions and utilities for building component-based web applications without bundles.
+FrenteJS is a lightweight JavaScript / TypeScript library that provides a set of functions and utilities for building component-based web applications without bundles or frameworks.
 
 ## Features
 
@@ -62,63 +62,67 @@ Button()
 
 // Call it into a variable to access it's attributes
 const ButtonF = Button()
-ButtonF.addEventListener("click", ()=> ButtonF.classList.replace("bg-blue-200","bg-gray-400"))
+ButtonF.addEventListener("click", () => ButtonF.classList.replace("bg-blue-200","bg-gray-400"))
 ```
 
 #### State Management
-Create a variable on the file you are initializing the components: `const toggle = Frente.createValue(1)`
+Create a variable with: `const toggle = Frente.createValue(1)`
 
 Update the variable with: `value.setValue((prevValue) => prevValue = prevValue + 1)`
 Or: `value.setValue(5)`
 
-You can pass it as normal variable to a component when you first imported it:
+You can pass it down to components/functions as normal variables or simple create a separate file to manage all your state and export it, e.g.:
+ `export const counterValue = Frente.createValue(1)`
+
+
+Then, you can update it in one component and respond to it in others:
 
 ```typescript
-const toggle = Frente.createValue(false)
-const title = "titulo", description = "descrição";
+import { counterValue } from "../../State/state.js"
+// other imports...
 
-const Article = () => {
-    const Article = _Article(Frente.S_id(idSection), title, description, toggle)
-    return Article._Article
-}
-```
-On the component side:
+const _Square = (parentElement?: HTMLElement) => {
+const idSquare = Frente.generateId()
 
-```typescript
-const _Article = (parentElement: HTMLElement, title:string, description:string, toggle:createValueType<boolean>) => {
-  const idArticle = Frente.generateId()
-  const idH1 = Frente.generateId()
-  const idP = Frente.generateId()
-  
-  // The .watch method receives a callback functions that executes it's logic when the value of toggle changes
-  toggle.watch(()=>{
-    if(toggle.value) _Article.element.classList.replace("flex", "hidden")
-    if(!toggle.value) _Article.element.classList.replace("hidden", "flex")
-
+const Button = () => {
+  const button = _Button(Frente.Sid(idSquare))
+  button.addEventListener("click", ()=> {
+      counterValue.setValue((prevValue) => prevValue + 1)
   })
-
-    const _Article = Frente.createElement(`
-    <article class="flex flex-1 flex-col gap-4 self-start" id="${idArticle}">
-        <h1 class="font-bold text-2xl text-left" id="${idH1}" >${title}</h1>
-        <p class="text-left text-md" id="${idP}">${description}</p>
-    </article>
-    `, {parentElement})
-  
-    return {_Article:_Article.element, ids: {idH1, idP}}
+  return button
 }
-export default _Article
+  ///rest of code...
+    return {_Square:section.element, ids:{idSquare}}
+}
+export default _Square
 ```
+Define what happens when the value changes...
+```typescript
+import { counterValue } from '../../State/state.js'
+
+const _HeroTitle = (parentElement: HTMLElement) => {
+
+  const title = "FrenteJS"
+  const description = "Write component based SPAs with simple JS"
+  let description2 = "Counter: " 
+  
+
+  counterValue.watch(()=>{
+    Frente.Sid(idP2).innerHTML = description2 + counterValue.value
+  })
+    ///rest of code...
+``````
 
 #### Manipulate children nodes by giving them Id's
 In the above code block we are returning the id's of the _Article's childrens nodes along side the _Article itself. We can use those id's to futher manipulate the DOM in our main file:
 ```typescript
 const Article = () => {
-    const Article = _Article(Frente.S_id(idSection), title, description, toggle)
+    const Article = _Article(Frente.Sid(idSection), title, description, toggle)
 
-    // The .S_id method only adds the char "#" to the id string and performs a normal document.querySelector()
-    const ArticleH1 = Frente.S_id(Article.ids.idH1) 
+    // The .Sid method is specified for id
+    const ArticleH1 = Frente.Sid(Article.ids.idH1) 
     ArticleH1.classList.add("text-red-500")
-    const ArticleP = Frente.S_id(Article.ids.idP)
+    const ArticleP = Frente.Sid(Article.ids.idP)
     ...
     return Article._Article
 }
@@ -133,7 +137,9 @@ const Article = () => {
     - ___variable_.setValue()__ - Set the new value of the state. You can set it directly or use a callback to get the previous value of the state and do something with it.
 - __Frente.generateId()__ - Generates an unique Id.
 - __Frente.S()__ - A quicker document.querySelector() method.
-- __Frente.S_id()__ - Also a querySelector but adds the char "#" to be faster with Id's.
+- __Frente.Sid()__ - Also a selector but specified for Id's.
 
 ## License
 MIT
+##
+Made with care

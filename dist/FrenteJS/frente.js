@@ -8,7 +8,8 @@ const Selector = (IdClassTag) => {
     return element;
 };
 const Selector_id = (HTMLElementIdValue) => {
-    const element = document.querySelector("#" + HTMLElementIdValue);
+    //const element = document.querySelector("#"+HTMLElementIdValue);
+    const element = document.getElementById(HTMLElementIdValue);
     if (!element) {
         console.warn("No element was selected. Verify id, class, or element existence");
         return null;
@@ -124,12 +125,12 @@ const Frente = (function () {
         const selector = Selector(idClassTag);
         return selector;
     };
-    const S_id = (elementId) => {
+    const Sid = (elementId) => {
         const selector = Selector_id(elementId);
         return selector;
     };
     ///
-    return { createElement, createValue, generateId, S, S_id };
+    return { createElement, createValue, generateId, S, Sid };
 })();
 export default Frente;
 //# sourceMappingURL=frente.js.map
