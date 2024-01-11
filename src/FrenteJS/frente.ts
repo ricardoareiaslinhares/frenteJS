@@ -9,7 +9,8 @@ const Selector = (IdClassTag: string): HTMLElement | null => {
   };
 
   const Selector_id = (HTMLElementIdValue: string): HTMLElement | null => {
-    const element = document.querySelector("#"+HTMLElementIdValue);
+    //const element = document.querySelector("#"+HTMLElementIdValue);
+    const element = document.getElementById(HTMLElementIdValue)
     if (!element) {
       console.warn("No element was selected. Verify id, class, or element existence");
       return null;
@@ -164,7 +165,7 @@ const Frente = (function() {
         return selector
     }
 
-    const S_id = (elementId: string): HTMLElement | null => {
+    const Sid = (elementId: string): HTMLElement | null => {
         const selector = Selector_id(elementId)
         return selector
     }
@@ -174,6 +175,6 @@ const Frente = (function() {
 
 
     ///
-    return {createElement, createValue, generateId, S, S_id}
+    return {createElement, createValue, generateId, S, Sid}
   })()
   export default Frente

@@ -1,5 +1,6 @@
-.vscode
 node_modules
+.vscode
+git.txt
 
 dist/css
 dist/ui
@@ -16,3 +17,4 @@ src/components
 src/ui
 src/app.ts
 src/tailwind.css
+
