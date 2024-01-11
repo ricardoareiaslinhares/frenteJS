@@ -78,7 +78,6 @@ const Card = () => {
 }
 
 let idSection3: string
-console.log(idSection3, "hh")
 const Section3 = () => {
     const section = _Section(Frente.Sid(idMain1))
     idSection3 = section.ids.idSection

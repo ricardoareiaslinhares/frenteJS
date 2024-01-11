@@ -2,7 +2,7 @@ import Frente from "../../FrenteJS/frente.js"
 
 const _Footer = (parentElement:HTMLElement) => {
     const idFooter = Frente.generateId()
-    console.log(idFooter)
+
 
     const footer = Frente.createElement(`
     <div id="${idFooter}" class="flex flex-1 items-center justify-center flex-col">

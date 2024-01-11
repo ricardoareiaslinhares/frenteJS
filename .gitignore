@@ -1,9 +1,11 @@
-.vscode
-dist
-src/app2.ts
-src/ui2
-
 node_modules
+.vscode
+git.txt
+
+
+dist
+
+
 
 
 
