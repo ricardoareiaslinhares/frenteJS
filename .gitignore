@@ -1,28 +1,10 @@
 .vscode
-dist/css
-dist/ui
-dist/ui2
-dist/components
-dist/app.js
-dist/app.js.map
-dist/app2.js
-dist/app2.js.map
-dist/FrenteJS/frente.js.map
-
+dist
 src/app2.js
 src/ui2
 
 node_modules
 
-
-
-tailwind.config.js
-tsconfig.json
-
-src/components
-src/ui
-src/app.ts
-src/tailwind.css
 
 
 
