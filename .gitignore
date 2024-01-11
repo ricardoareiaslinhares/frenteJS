@@ -6,7 +6,6 @@ dist/app.js.map
 dist/FrenteJS/frente.js.map
 
 node_modules
-index.html
 tailwind.config.js
 tsconfig.json
 
