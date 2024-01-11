@@ -7,7 +7,8 @@ import _HeroTitle from "./components/hero/HeroTitle.js"
 import _NavBar from "./components/navBar/NavBar.js"
 import _Div from "./ui/Div.js"
 import _Main from "./ui/Main.js"
-import _Section from "./ui2/SectionX.js"
+import _Section from "./ui/Section.js"
+
 
 
 

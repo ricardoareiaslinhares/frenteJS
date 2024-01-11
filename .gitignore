@@ -1,6 +1,6 @@
 .vscode
 dist
-src/app2.js
+src/app2.ts
 src/ui2
 
 node_modules
