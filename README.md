@@ -14,10 +14,16 @@ FrenteJS is a lightweight JavaScript / TypeScript library that provides a set of
 
 
 ### Installation
+You can just copy the file into your project:
+ - For TS projects simply go to the src/FrenteJS/frente.ts, download the file and include it in your project.
+ - For JS projects download from dist/FrenteJS/frente.js
 
-For TS projects simply go to the src/FrenteJS/frente.ts, download the file and include it in your project.
+ You can also start with a template for TypeScript and Tailwind projects, that already contains some UI elements and Componentes made:
 
-For JS projects download from dist/FrenteJS/frente.js
+ ` git clone -b ts-tw-template https://github.com/genaiPT/frenteJS.git `
+
+ After cloning and installing with npm, run `npm run watch` to launch the TS and Tailwing compilers in watch mode, and start a dev server using extensions like liveserver (in vscode at least).
+
 
 
 ### Usage
@@ -97,6 +103,7 @@ const Button = () => {
 export default _Square
 ```
 Define what happens when the value changes...
+
 ```typescript
 import { counterValue } from '../../State/state.js'
 
@@ -113,8 +120,9 @@ const _HeroTitle = (parentElement: HTMLElement) => {
     ///rest of code...
 ``````
 
-#### Manipulate children nodes by giving them Id's
-In the above code block we are returning the id's of the _Article's childrens nodes along side the _Article itself. We can use those id's to futher manipulate the DOM in our main file:
+#### Manipulate children nodes by giving them Ids
+
+In the above code block we are returning the ids of the _Articles childrens nodes along side the _Article itself. We can use those ids to futher manipulate the DOM in our main file:
 ```typescript
 const Article = () => {
     const Article = _Article(Frente.Sid(idSection), title, description, toggle)
@@ -141,5 +149,3 @@ const Article = () => {
 
 ## License
 MIT
-##
-Made with care
