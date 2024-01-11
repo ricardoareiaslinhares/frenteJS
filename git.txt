@@ -1,0 +1,21 @@
+template branch: ts-tw-template
+acrescentar ao git ignre:
+dist
+
+amin branch
+
+dist/css
+dist/ui
+dist/components
+dist/app.js
+dist/app.js.map
+dist/FrenteJS/frente.js.map
+
+
+tailwind.config.js
+tsconfig.json
+
+src/components
+src/ui
+src/app.ts
+src/tailwind.css
