@@ -32,7 +32,7 @@ const createNewElement = (htmlStringTemplate) => {
         const match = trimmedHtmlStringTemplate.match(regex);
         if (!match)
             console.warn("An id must be provided to acess the Element API");
-        return match?.[1];
+        return match === null || match === void 0 ? void 0 : match[1];
     };
     const getElement = () => {
         const regex = /^<(\w+)/;
@@ -40,7 +40,7 @@ const createNewElement = (htmlStringTemplate) => {
         if (!match) {
             return console.warn("Not valid html tag. Use syntax like, for example: `<button id='${id}'></button>`");
         }
-        return document.createElement(match?.[1]);
+        return document.createElement(match === null || match === void 0 ? void 0 : match[1]);
     };
     const element = getElement();
     const defineOutterHTML = (htmlStringTemplate) => {

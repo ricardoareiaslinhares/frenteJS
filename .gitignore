@@ -2,19 +2,3 @@ node_modules
 .vscode
 git.txt
 
-
-dist/css
-dist/ui
-dist/components
-dist/app.js
-dist/app.js.map
-dist/FrenteJS/frente.js.map
-
-
-tailwind.config.js
-tsconfig.json
-
-src/components
-src/ui
-src/app.ts
-src/tailwind.css
