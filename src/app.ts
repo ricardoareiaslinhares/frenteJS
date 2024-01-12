@@ -64,7 +64,7 @@ const CounterSquare = () => {
 
 type CardInfoType = {title:string, description:string, link?:string}
 const cardInfo:CardInfoType[] = [
-    {title : "Docs", description :"Check the github page to quickly learn FrenteJS", link:"https://github.com/genaiPT/frenteJS/tree/ts-tw-template"},
+    {title : "Docs", description :"Check the github page to quickly learn FrenteJS", link:"https://github.com/genaiPT/frenteJS"},
     {title : "See the source", description :"Take a look at this page source code to have an idea of how to organize your project"}
 ]
 const Card = () => {
