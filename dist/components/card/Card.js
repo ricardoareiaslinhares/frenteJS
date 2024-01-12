@@ -12,9 +12,11 @@ const _Card = (parentElement, title, description, link) => {
   </div>
   `, { parentElement });
     Article();
-    card.element.addEventListener("click", () => {
-        window.open(link, "_blank");
-    });
+    if (link) {
+        card.element.addEventListener("click", () => {
+            window.open(link, "_blank");
+        });
+    }
     return card.element;
 };
 export default _Card;
