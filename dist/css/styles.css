@@ -818,11 +818,6 @@ body {
   background-color: rgb(255 255 255 / 0.9);
 }
 
-.bg-red-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
-}
-
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -865,24 +860,12 @@ body {
   padding-bottom: 1.5rem;
 }
 
-.pt-\[34px\] {
-  padding-top: 34px;
-}
-
-.pt-5 {
-  padding-top: 1.25rem;
-}
-
-.pt-9 {
-  padding-top: 2.25rem;
-}
-
 .pt-20 {
   padding-top: 5rem;
 }
 
-.pb-4 {
-  padding-bottom: 1rem;
+.pt-\[34px\] {
+  padding-top: 34px;
 }
 
 .text-left {
@@ -1078,12 +1061,12 @@ body {
 }
 
 @media (min-width: 640px) {
-  .sm\:mr-14 {
-    margin-right: 3.5rem;
-  }
-
   .sm\:mb-4 {
     margin-bottom: 1rem;
+  }
+
+  .sm\:mr-14 {
+    margin-right: 3.5rem;
   }
 
   .sm\:h-36 {
@@ -1106,10 +1089,6 @@ body {
 
   .sm\:justify-evenly {
     justify-content: space-evenly;
-  }
-
-  .sm\:pt-3 {
-    padding-top: 0.75rem;
   }
 
   .sm\:pt-0 {
