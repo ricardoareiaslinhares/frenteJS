@@ -18,7 +18,7 @@ You can just copy the file into your project:
  - For TS projects simply go to the src/FrenteJS/frente.ts, download the file and include it in your project.
  - For JS projects download from dist/FrenteJS/frente.js
 
- You can also start with a template for TypeScript and Tailwind projects, that already contains some UI elements and Componentes made:
+ You can also start with a template for TypeScript and Tailwind projects, that already contains some UI elements and Components made:
 
  ` git clone -b ts-tw-template https://github.com/genaiPT/frenteJS.git `
 
@@ -72,7 +72,7 @@ ButtonF.addEventListener("click", () => ButtonF.classList.replace("bg-blue-200",
 ```
 
 #### State Management
-Create a variable with: `const toggle = Frente.createValue(1)`
+Create a variable like: `const toggle = Frente.createValue(1)`
 
 Update the variable with: `value.setValue((prevValue) => prevValue = prevValue + 1)`
 Or: `value.setValue(5)`
@@ -105,34 +105,49 @@ export default _Square
 Define what happens when the value changes...
 
 ```typescript
-import { counterValue } from '../../State/state.js'
-
 const _HeroTitle = (parentElement: HTMLElement) => {
+  const idHeroTitle = Frente.generateId()
+  const idH1 = Frente.generateId()
+  const idP = Frente.generateId()
+  const idP2 = Frente.generateId()
 
   const title = "FrenteJS"
   const description = "Write component based SPAs with simple JS"
   let description2 = "Counter: " 
   
-
   counterValue.watch(()=>{
     Frente.Sid(idP2).innerHTML = description2 + counterValue.value
   })
-    ///rest of code...
-``````
+  
+    const heroTitle = Frente.createElement(`
+    <article class="flex flex-col gap-12 self-center items-center justify-center py-10" id="${idHeroTitle}">
+        <h1 class="font-bold text-6xl sm:text-7xl text-left" id="${idH1}" >${title}</h1>
+        <p class="text-center sm:text-left text-lg" id="${idP}">${description}</p>
+        <p class="text-left text-lg font-semibold text-primary" id="${idP2}">${description2} 1</p>
+    </article>
+    `, {parentElement})
+  
+    return {heroTitle:heroTitle.element, ids: {idHeroTitle, idH1, idP}}
+}
+export default _HeroTitle
+```
 
 #### Manipulate children nodes by giving them Ids
 
-In the above code block we are returning the ids of the _Articles childrens nodes along side the _Article itself. We can use those ids to futher manipulate the DOM in our main file:
+In the above code block we are returning the ids of the _HeroTitle children nodes along side the _HeroTitle itself. We can use those ids to futher manipulate the DOM in our main file:
+
+In here we import a _Article component that has an h1 and p as children, we get their ids to set new atributes.
 ```typescript
 const Article = () => {
-    const Article = _Article(Frente.Sid(idSection), title, description, toggle)
+    const article = _Article(Frente.Sid(idSection), title, description, toggle)
 
     // The .Sid method is specified for id
-    const ArticleH1 = Frente.Sid(Article.ids.idH1) 
+    const articleH1 = Frente.Sid(Article.ids.idH1) 
     ArticleH1.classList.add("text-red-500")
-    const ArticleP = Frente.Sid(Article.ids.idP)
+    const articleP = Frente.Sid(Article.ids.idP)
+    ArticleP.innerHTML = "new text"
     ...
-    return Article._Article
+    return article._Article
 }
 ```
 

@@ -16,10 +16,12 @@ const Article = () => {
   </div>
   `,{parentElement})
   Article()
-
+if(link) {
   card.element.addEventListener("click", ()=>{
     window.open(link, "_blank")
   })
+}
+ 
 
   return card.element
 }

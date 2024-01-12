@@ -38,7 +38,7 @@ const Section2 = () => {
     const section = _Section(Frente.Sid(idMain1))
     idSection2 = section.ids.idSection
     section._Section.classList.remove("flex-col", "justify-center", "items-center", "p-12")
-    let className = " relative z-0 sm:-translate-y-[130px] flex-row sm:justify-evenly sm:items-center items-start justify-start  p-4 "
+    let className = " relative z-0 sm:-translate-y-[130px] flex-row sm:justify-evenly sm:items-center items-start justify-start  p-4 pt-20 sm:pt-0 "
     section._Section.className += className
     return section._Section
 }
@@ -64,7 +64,7 @@ const CounterSquare = () => {
 
 type CardInfoType = {title:string, description:string, link?:string}
 const cardInfo:CardInfoType[] = [
-    {title : "Docs", description :"Check the github page to quickly learn FrenteJS", link:"https://github.com/genaiPT/frenteJS"},
+    {title : "Docs", description :"Check the github page to quickly learn FrenteJS", link:"https://github.com/genaiPT/frenteJS/tree/ts-tw-template"},
     {title : "See the source", description :"Take a look at this page source code to have an idea of how to organize your project"}
 ]
 const Card = () => {
@@ -82,7 +82,7 @@ const Section3 = () => {
     const section = _Section(Frente.Sid(idMain1))
     idSection3 = section.ids.idSection
     section._Section.classList.remove("p-12")
-    let className = "  sm:-translate-y-[130px] pt-3"
+    let className = "  sm:-translate-y-[130px] py-6 mb-4 sm:mb-4 "
     section._Section.className += className
     return section._Section
 }
