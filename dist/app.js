@@ -53,7 +53,7 @@ const CounterSquare = () => {
     return counter;
 };
 const cardInfo = [
-    { title: "Docs", description: "Check the github page to quickly learn FrenteJS", link: "https://github.com/genaiPT/frenteJS" },
+    { title: "Docs", description: "Check the github page to quickly learn FrenteJS", link: "https://github.com/genaiPT/frenteJS/tree/ts-tw-template" },
     { title: "See the source", description: "Take a look at this page source code to have an idea of how to organize your project" }
 ];
 const Card = () => {
