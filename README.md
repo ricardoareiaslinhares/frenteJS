@@ -115,6 +115,7 @@ const _HeroTitle = (parentElement: HTMLElement) => {
   const description = "Write component based SPAs with simple JS"
   let description2 = "Counter: " 
   
+  // Here
   counterValue.watch(()=>{
     Frente.Sid(idP2).innerHTML = description2 + counterValue.value
   })
