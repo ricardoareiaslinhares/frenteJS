@@ -1,10 +1,6 @@
 import Frente from "../../FrenteJS/frente.js";
 const _Footer = (parentElement) => {
     const idFooter = Frente.generateId();
-<<<<<<< HEAD
-    console.log(idFooter);
-=======
->>>>>>> ts-tw-template
     const footer = Frente.createElement(`
     <div id="${idFooter}" class="flex flex-1 items-center justify-center flex-col">
     <p  class="text-md font-semibold text-secondary" >Handcrafted with care by</p>

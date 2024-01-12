@@ -14,11 +14,9 @@ const _HeroTitle = (parentElement: HTMLElement) => {
   const description = "Write component based SPAs with simple JS"
   let description2 = "Counter: " 
   
-
   counterValue.watch(()=>{
     Frente.Sid(idP2).innerHTML = description2 + counterValue.value
   })
-
   
     const heroTitle = Frente.createElement(`
     <article class="flex flex-col gap-12 self-center items-center justify-center py-10" id="${idHeroTitle}">
@@ -27,7 +25,6 @@ const _HeroTitle = (parentElement: HTMLElement) => {
         <p class="text-left text-lg font-semibold text-primary" id="${idP2}">${description2} 1</p>
     </article>
     `, {parentElement})
-  
   
     return {heroTitle:heroTitle.element, ids: {idHeroTitle, idH1, idP}}
 }

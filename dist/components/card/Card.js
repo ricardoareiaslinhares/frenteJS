@@ -12,17 +12,11 @@ const _Card = (parentElement, title, description, link) => {
   </div>
   `, { parentElement });
     Article();
-<<<<<<< HEAD
-    card.element.addEventListener("click", () => {
-        window.open(link, "_blank");
-    });
-=======
     if (link) {
         card.element.addEventListener("click", () => {
             window.open(link, "_blank");
         });
     }
->>>>>>> ts-tw-template
     return card.element;
 };
 export default _Card;
