@@ -3,7 +3,7 @@ const _Logo = (parentElement) => {
     const idLogo = Frente.generateId();
     const logo = Frente.createElement(`
     <div id="${idLogo}" class="w-[40px] h-auto flex items-center justify-center ">
-        <img src="../../../assets/logo.png" alt="Ricardo Linhares Logo" ></img>
+    <img src="../../../assets/logo.png" alt="Ricardo Linhares Logo" >
     </div>
     `, { parentElement });
     return logo;
