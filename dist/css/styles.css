@@ -872,6 +872,10 @@ body {
   text-align: left;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1093,6 +1097,10 @@ body {
 
   .sm\:pt-0 {
     padding-top: 0px;
+  }
+
+  .sm\:text-left {
+    text-align: left;
   }
 
   .sm\:text-7xl {
