@@ -69,7 +69,7 @@ const Section3 = () => {
     const section = _Section(Frente.Sid(idMain1));
     idSection3 = section.ids.idSection;
     section._Section.classList.remove("p-12");
-    let className = "  sm:-translate-y-[130px] pt-3";
+    let className = "  sm:-translate-y-[130px] py-6 sm:pt-3";
     section._Section.className += className;
     return section._Section;
 };

@@ -25,7 +25,7 @@ const Button = () => {
 }
 
     const section = Frente.createElement(`
-        <div id="${idSquare}" class="relative z-20 h-[105px] w-[105px] border rotate-45 sm:-translate-y-[65px]  self-center hover:to-blue-200 hover:from-white hover:bg-gradient-to-r hover:via-blue-100 transition duration-300 ease-in-out "></div>
+        <div id="${idSquare}" class="relative z-20 h-[105px] w-[105px] border rotate-45 sm:-translate-y-[65px]  self-center hover:to-blue-200 hover:from-white hover:bg-gradient-to-r hover:via-blue-100 transition duration-300 ease-in-out p-3 sm:p-0 "></div>
     `,{parentElement })
 
     Button()
