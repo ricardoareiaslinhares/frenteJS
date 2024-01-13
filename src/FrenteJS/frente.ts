@@ -31,7 +31,7 @@ const getIdFromHTMLElement = (HTMLElement:HTMLElement): string | null =>  {
  */
 
 //CREATE HTML ELEMENT
-const createNewElement = (htmlStringTemplate: string) => {
+export const createNewElement = (htmlStringTemplate: string) => {
     
     const trimmedHtmlStringTemplate = htmlStringTemplate.trim()
 
@@ -63,6 +63,7 @@ const createNewElement = (htmlStringTemplate: string) => {
 ///
     return {id, defineOutterHTML, element}
 }
+
 
 //ID GENERATION
 const idSet = new Set()
@@ -135,7 +136,7 @@ export type createValueType<T> = Readonly<{
     unWatch: (watcher: (value: T, oldValue: T) => void) => number;
   }>;
 
-
+console.log("jjj")
 
   //MAIN LIBRARY FUNCTION
 
@@ -145,6 +146,7 @@ const Frente = (function() {
         parentElement.appendChild(newElement.element)
 
         newElement.defineOutterHTML(htmlStringTemplate)
+    
         const element = Selector(newElement.id)
 
         return {element}

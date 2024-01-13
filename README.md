@@ -72,7 +72,7 @@ ButtonF.addEventListener("click", () => ButtonF.classList.replace("bg-blue-200",
 ```
 
 #### State Management
-Create a variable like: `const toggle = Frente.createValue(1)`
+Create a variable like: `const value = Frente.createValue(1)`
 
 Update the variable with: `value.setValue((prevValue) => prevValue = prevValue + 1)`
 Or: `value.setValue(5)`
@@ -93,7 +93,7 @@ const idSquare = Frente.generateId()
 const Button = () => {
   const button = _Button(Frente.Sid(idSquare))
   button.addEventListener("click", ()=> {
-      counterValue.setValue((prevValue) => prevValue + 1)
+      counterValue.setValue((prevValue) => prevValue + 1) //Here
   })
   return button
 }
@@ -164,7 +164,7 @@ const Article = () => {
 - __Frente.Sid()__ - Also a selector but specified for Id's.
 
 ## Exemple
-The next is the page of the ts-tw-template, built with [FrenteJS](https://genaipt.github.io/frenteJS/)
+The next is the page of the ts-tw-template, built with [FrenteJS](https://genaipt.github.io/frenteJS/){:target="_blank"}
 
 ## License
 MIT

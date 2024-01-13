@@ -1,11 +1,18 @@
+
 {
     "compilerOptions": {
       "module": "ES2015",
-      "moduleResolution": "Node",
+      "moduleResolution": "node",
       "target": "ES2015",
       "sourceMap": true,
       "outDir": "dist",
+      "types": ["node", "jest"],
+      "allowJs": true, //true for testing
+      "esModuleInterop": true, //true for testing
+      "allowImportingTsExtensions":true,//true for testing
+      "noEmit": true //true for testing
     },
     "include": ["src/**/*"],
-    "exclude": ["src/tailwind.css"]
+    "exclude": ["src/tailwind.css", "src/**/*.test.*/"]
   }
+

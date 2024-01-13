@@ -25,7 +25,7 @@ const getIdFromHTMLElement = (HTMLElement:HTMLElement): string | null =>  {
 }
  */
 //CREATE HTML ELEMENT
-const createNewElement = (htmlStringTemplate) => {
+export const createNewElement = (htmlStringTemplate) => {
     const trimmedHtmlStringTemplate = htmlStringTemplate.trim();
     const getId = () => {
         const regex = /id="([^"]+)"/;
@@ -104,6 +104,7 @@ const observer = (initialValue) => {
         unWatch
     });
 };
+console.log("jjj");
 //MAIN LIBRARY FUNCTION
 const Frente = (function () {
     const createElement = (htmlStringTemplate, { parentElement = ParentAppElement } = {}) => {
