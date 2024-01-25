@@ -164,7 +164,7 @@ const Article = () => {
 - __Frente.Sid()__ - Also a selector but specified for Id's.
 
 ## Exemple
-The next is the page of the ts-tw-template, built with [FrenteJS](https://genaipt.github.io/frenteJS/){:target="_blank"}
+The next is the page of the ts-tw-template, built with [FrenteJS](https://genaipt.github.io/frenteJS/)
 
 ## License
 MIT
