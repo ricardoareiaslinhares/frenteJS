@@ -18,9 +18,9 @@ const TogglerTheme = () => {
 }
 
 const navBar = Frente.createElement(`
-<nav id="${idNavBar}" class="fixed top-0 w-full max-w-screen-2xl  h-[64px] bg-card shadow-sm" >
+<nav id="${idNavBar}" class="fixed top-0 w-full  h-[64px] bg-card shadow-sm flex justify-center" >
 
-    <div id="${idDiv}" class="flex-1 2xl:px-72 h-[64px] flex items-center justify-between self-center mx-6">
+    <div id="${idDiv}" class="flex-1 2xl:px-40 h-[64px] max-w-screen-2xl  flex items-center justify-between self-center mx-6">
  
  
    </div>

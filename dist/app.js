@@ -23,7 +23,7 @@ const Section1 = () => {
     idSection1 = section.ids.idSection;
     section._Section.classList.remove("flex-col", "justify-center");
     // Rewrite classes this way to get tailwind intelesense here
-    let className = "  flex-row justify-between flex-wrap bg-gradient-to-b from-hero-start to-hero-end";
+    let className = "  flex-row flex-wrap bg-gradient-to-b from-hero-start to-hero-end justify-center ";
     section._Section.className += className;
     return section._Section;
 };
@@ -40,7 +40,7 @@ let idDiv1;
 const Div1 = () => {
     const div = _Div(Frente.Sid(idSection1));
     idDiv1 = div.ids.idDiv;
-    let className = " flex flex-1 justify-end sm:mr-14";
+    let className = " flex flex-1 2xl:flex-none justify-center lg:justify-end 2xl:justify-center 2xl:ml-96 2xl:pl-16 ";
     div._Div.className += className;
     return div._Div;
 };
@@ -82,7 +82,7 @@ const Code = () => {
     return code;
 };
 // Components
-Frente.S("body").classList.add("pt-[34px]", "2xl:flex", "2xl:justify-center");
+Frente.S("body");
 NavBar();
 Main1();
 Section1();
