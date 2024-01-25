@@ -7,10 +7,10 @@
       "sourceMap": true,
       "outDir": "dist",
       "types": ["node", "jest"],
-      "allowJs": true, //true for testing
-      "esModuleInterop": true, //true for testing
-      "allowImportingTsExtensions":true,//true for testing
-      "noEmit": true //true for testing
+      "allowJs": false, //true for testing
+      "esModuleInterop": false, //true for testing
+      "allowImportingTsExtensions":false,//true for testing
+      "noEmit": false //true for testing
     },
     "include": ["src/**/*"],
     "exclude": ["src/tailwind.css", "src/**/*.test.*/"]

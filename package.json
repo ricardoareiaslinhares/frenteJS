@@ -9,7 +9,8 @@
     "test": "jest",
     "build": "tsc",
     "tailwind": "tailwindcss -i src/tailwind.css -o dist/css/styles.css --watch",
-    "watch": "concurrently \"npm run tailwind\" \"tsc --watch\""
+    "watch": "concurrently \"npm run tailwind\" \"tsc --watch\"",
+    "log" : "node --watch dist/FrenteJS/frenteTwo.js"
   },
   "exclude": [
     "src/**/*.ts"
