@@ -14,7 +14,8 @@ FrenteJS is a lightweight JavaScript / TypeScript library that provides a set of
 
 
 ### Installation
-You can just copy the file into your project:
+You can just copy the file into your project.
+**Got to the branch: ts-tw-template:**
  - For TS projects simply go to the src/FrenteJS/frente.ts, download the file and include it in your project.
  - For JS projects download from dist/FrenteJS/frente.js
 
