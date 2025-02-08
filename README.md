@@ -164,7 +164,7 @@ const Article = () => {
 - __Frente.S()__ - A quicker document.querySelector() method.
 - __Frente.Sid()__ - Also a selector but specified for Id's.
 
-## Exemple
+## Example
 The next is the page of the ts-tw-template, built with [FrenteJS](https://genaipt.github.io/frenteJS/)
 
 ## License
